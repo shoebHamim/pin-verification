@@ -1,0 +1,14 @@
+so...
+1.
+
+i used a very naive approach to input digits
+i could have used event bubble.. and get all the digit writing just one 
+event listener like..the id off all the digit ='digits'
+
+document.getElementById('digits').addEventListener('click',function(event){
+    const input_value=events.target;
+})
+
+2.
+
+didn't implement the try count part..for consecutive wrong input
