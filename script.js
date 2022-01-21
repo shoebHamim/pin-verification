@@ -56,14 +56,16 @@ clear.addEventListener('click', function () {
 document.getElementById('submit-pin').addEventListener('click', function () {
     const given_pin = parseInt(provide_pin.value);
     if (given_pin == pin) {
-        alert("Correct");
+        document.getElementById('correct-notify').style.display='block';
+        document.getElementById('incorrect-notify').style.display='none';
         document.getElementById('input-pin').value = '';
         provide_pin.value = '';
 
 
     }
     else {
-        alert('incorrect');
+        document.getElementById('incorrect-notify').style.display='block';
+        document.getElementById('correct-notify').style.display='none';
         provide_pin.value = '';
 
     }
