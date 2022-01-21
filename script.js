@@ -1,11 +1,11 @@
 const generate_button=document.getElementById('generate-button');
+var pin='';
 generate_button.addEventListener('click',function(){
-    const pin = Math.floor(1000 + Math.random() * 9000);
-    // console.log(pin);
+    pin = Math.floor(1000 + Math.random() * 9000);
+   
     const input_pin=document.getElementById('input-pin');
     input_pin.value=pin;
 });
-
 const provide_pin=document.getElementById('provide-pin');
 
 const one=document.getElementById(1);
@@ -51,5 +51,15 @@ zero.addEventListener('click',function(){
 const clear=document.getElementById('clear');
 clear.addEventListener('click',function(){
     provide_pin.value='';
+})
+
+document.getElementById('submit-pin').addEventListener('click',function(){
+    const given_pin= parseInt(provide_pin.value);
+    if(given_pin==pin){
+        console.log("Correct");
+    }
+    else{
+        console.log('incorrect');
+    }
 })
 
